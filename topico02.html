@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog Home - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+        <h1>Compilação de C no Linux Usando o Terminal</h1>
+        <p>Para compilar códigos em C no Linux usando o terminal, você pode usar o compilador <strong>gcc</strong> (GNU Compiler Collection). Aqui estão os passos básicos para compilar e executar um programa em C:</p>
+    </header>
+    <section>
+        <h2>1. Verificar se o gcc está instalado</h2>
+        <p>Você pode verificar se o gcc está instalado digitando:</p>
+        <pre>gcc --version</pre>
+
+        <h2>2. Instalar o GCC (se ainda não estiver instalado)</h2>
+        <p>Primeiro, você precisa ter o gcc instalado no seu sistema. Você pode instalar usando o gerenciador de pacotes da sua distribuição. Por exemplo:</p>
+        <h3>Debian/Ubuntu:</h3>
+        <pre>sudo apt update
+sudo apt install build-essential</pre>
+        <h3>Fedora:</h3>
+        <pre>sudo dnf install gcc</pre>
+
+        <h2>3. Criar um arquivo de código-fonte em C</h2>
+        <p>Use um editor de texto para criar um arquivo com a extensão .c. Por exemplo, você pode usar <strong>nano</strong>, <strong>vim</strong>, ou <strong>gedit</strong>. Vamos usar o <strong>vim</strong> nesse exemplo.</p>
+
+        <h3>Passo 1: Abrir o terminal</h3>
+        <p>Primeiro, abra o terminal.</p>
+
+        <h3>Passo 2: Criar um arquivo de código-fonte em C</h3>
+        <p>Usaremos o vim para criar um arquivo de código.</p>
+        <p>Criando um arquivo novo:</p>
+        <pre>vim meu_programa.c</pre>
+        <p>Entrar no modo de inserção:</p>
+        <p>No vim, você precisa entrar no modo de inserção para começar a digitar. Pressione <strong>i</strong> para entrar no modo de inserção.</p>
+        <p>Escreva o código:</p>
+        <pre>#include &lt;stdio.h&gt;
+
+            int main() {
+                printf("Olá, mundo!\\n");
+                return 0;
+            }</pre>
+
+        <h3>Salvar e sair do vim:</h3>
+        <p>Para salvar o arquivo e sair do vim, siga essas etapas:</p>
+        <ul>
+            <li>Pressione <strong>Esc</strong> para sair do modo de inserção.</li>
+            <li>Digite <strong>:wq</strong> e pressione <strong>Enter</strong>. Isso salva o arquivo e sai do vim.</li>
+        </ul>
+
+        <h2>4. Compilar o código</h2>
+        <p>Agora que você tem o código-fonte, você precisa compilá-lo usando o gcc.</p>
+        <h3>Compilar o programa:</h3>
+        <p>No terminal, digite o seguinte comando para compilar o arquivo <strong>meu_programa.c</strong>:</p>
+        <pre>gcc meu_programa.c -o meu_programa</pre>
+        <p>Aqui, <strong>-o meu_programa</strong> especifica o nome do arquivo executável que será gerado. Se você não usar essa opção, o executável será nomeado <strong>a.out</strong> por padrão.</p>
+
+        <h2>5. Executar o programa</h2>
+        <p>Depois de compilar, você pode executar o programa gerado.</p>
+        <h3>Executar o programa:</h3>
+        <p>No terminal, digite o seguinte comando:</p>
+        <pre>./meu_programa</pre>
+        <p>se tudo estiver correto, você verá a saída</p>
+
+
+
+            <!-- Botão de Voltar -->
+            <a href="index.html" class="btn-voltar">Voltar para o Blog</a>
+        </main>
+        <footer>
+            <p>&copy; 2024 Blog de Tecnologia. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
