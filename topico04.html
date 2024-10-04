@@ -27,7 +27,7 @@
                 </div>
             </div>
         </nav>
-        <!-- Page header with logo and tagline-->
+        <!-- =Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4">
         </header>
         <!-- Page content-->
@@ -38,10 +38,57 @@
                     <!-- Featured blog post-->
                     <div class="card mb-4">
                         <div class="card-body">
-                <h1 class="card-title">titulo do artigo</h1>
+                            <h1 class="card-title">variáveis de ambiente</h1>
+                            <p>As variáveis de ambiente são pares de chave-valor que armazenam informações sobre o ambiente do sistema operacional e influenciam o comportamento de processos em execução. Elas são amplamente utilizadas em sistemas operacionais Unix/Linux e também em outros sistemas operacionais como Windows.</p>
 
-                </div>
-             </div>
+                            <h2>Exemplos mais comuns:</h2>
+                            <ul>
+                                <li><strong>PATH:</strong> Contém uma lista de diretórios onde o sistema procura executáveis</li>
+                                <li><strong>HOME:</strong> O diretório home do usuário atual</li>
+                                <li><strong>USER:</strong> O nome do usuário atual</li>
+                                <li><strong>SHELL:</strong> O shell padrão do usuário (por exemplo, /bin/bash)</li>
+                            </ul>
+
+                            <h2>Como funcionam as variáveis de ambiente</h2>
+                            <h3>Escopo:</h3>
+                            <p>As variáveis de ambiente podem ser definidas para o sistema inteiro ou por um usuário específico. Variáveis definidas em um terminal ou sessão de shell são geralmente locais a essa sessão.</p>
+
+                            <h3>Acesso:</h3>
+                            <p>Você pode acessar o valor de uma variável de ambiente usando o prefixo <code>$</code>. Por exemplo, para acessar o diretório home do usuário, você pode usar <code>$HOME</code>.</p>
+
+                            <h3>Herança:</h3>
+                            <p>Quando um processo é iniciado, ele herda as variáveis de ambiente do processo pai. Isso significa que se você definir uma variável em um terminal, todos os programas iniciados a partir desse terminal terão acesso a essa variável.</p>
+
+                            <h2>Como visualizar variáveis de ambiente</h2>
+                            <p>Para visualizar todas as variáveis de ambiente definidas no seu sistema, você pode usar o comando <code>printenv</code> ou <code>env</code> no terminal:</p>
+                            <p>Para visualizar uma variável específica, você pode usar o comando <code>echo</code>:</p>
+                            <pre><code>echo $NOME_DA_VARIAVEL</code></pre>
+
+                            <h2>Como definir e modificar variáveis de ambiente</h2>
+                            <h3>Definindo uma variável temporariamente:</h3>
+                            <p>Para definir uma variável de ambiente temporariamente (válida apenas para essa sessão atual do terminal), você pode usar o comando <code>export</code>:</p>
+                            <pre><code>export NOME_DA_VARIAVEL=valor</code></pre>
+                            <p>Exemplo:</p>
+                            <pre><code>export MEU_VAR="Olá, Mundo!"</code></pre>
+
+                            <h3>Acessar a variável:</h3>
+                            <p>Para acessar o valor da variável que você definiu, use:</p>
+                            <pre><code>echo $MEU_VAR</code></pre>
+
+                            <h3>Definir uma variável permanentemente:</h3>
+                            <p>Para tornar uma variável de ambiente permanente, você pode adicioná-la ao arquivo de configuração de seu shell, como <code>~/.bashrc</code> ou <code>~/.bash_profile</code> para bash, ou <code>~/.zshrc</code> para zsh.</p>
+
+                            <p>Abra o arquivo de configuração do shell:</p>
+                            <ul>
+                                <li>Se você estiver usando o bash, abra o arquivo <code>~/.bashrc</code>:</li>
+                                <pre><code>vim ~/.bashrc</code></pre>
+                                <li>Se você estiver usando o zsh, abra o arquivo <code>~/.zshrc</code>:</li>
+                                <pre><code>vim ~/.zshrc</code></pre>
+                            </ul>
+
+                            <h3>Entrar no modo de inserção:</h3>
+                        </div>
+                    </div>
 
                     <nav aria-label="Pagination">
                         <hr class="my-0" />
@@ -106,5 +153,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-</body>
+    </body>
 </html>

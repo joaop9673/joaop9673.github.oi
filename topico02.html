@@ -38,73 +38,73 @@
                     <!-- Featured blog post-->
                     <div class="card mb-4">
                         <div class="card-body">
-                <h1 class="card-title">Compilação de C no Linux Usando o Terminal</h1>
-                <p>Para compilar códigos em C no Linux usando o terminal, você pode usar o compilador <strong>gcc</strong> (GNU Compiler Collection). Aqui estão os passos básicos para compilar e executar um programa em C:</p>
-            </header>
-            <section>
-                <h2 class="card-title">1. Verificar se o gcc está instalado</h2>
-                <p>Você pode verificar se o gcc está instalado digitando:</p>
-                <pre>gcc --version</pre>
+                            <h1 class="card-title">Compilação de C no Linux Usando o Terminal</h1>
+                            <p>Para compilar códigos em C no Linux usando o terminal, você pode usar o compilador <strong>gcc</strong> (GNU Compiler Collection). Aqui estão os passos básicos para compilar e executar um programa em C:</p>
+                            </header>
+                            <section>
+                                <h2 class="card-title">1. Verificar se o gcc está instalado</h2>
+                                <p>Você pode verificar se o gcc está instalado digitando:</p>
+                                <pre>gcc --version</pre>
 
-                <h2 class="card-title">2. Instalar o GCC (se ainda não estiver instalado)</h2>
-                <p>Primeiro, você precisa ter o gcc instalado no seu sistema. Você pode instalar usando o gerenciador de pacotes da sua distribuição. Por exemplo:</p>
-                <h3 class="card-title">Debian/Ubuntu:</h3>
-                <pre>sudo apt update
+                                <h2 class="card-title">2. Instalar o GCC (se ainda não estiver instalado)</h2>
+                                <p>Primeiro, você precisa ter o gcc instalado no seu sistema. Você pode instalar usando o gerenciador de pacotes da sua distribuição. Por exemplo:</p>
+                                <h3 class="card-title">Debian/Ubuntu:</h3>
+                                <pre>sudo apt update
         sudo apt install build-essential</pre>
-                <h3 class="card-title">Fedora:</h3>
-                <pre>sudo dnf install gcc</pre>
+                                <h3 class="card-title">Fedora:</h3>
+                                <pre>sudo dnf install gcc</pre>
 
-                <h2 class="card-title">3. Criar um arquivo de código-fonte em C</h2>
-                <p>Use um editor de texto para criar um arquivo com a extensão .c. Por exemplo, você pode usar <strong>nano</strong>, <strong>vim</strong>, ou <strong>gedit</strong>. Vamos usar o <strong>vim</strong> nesse exemplo.</p>
+                                <h2 class="card-title">3. Criar um arquivo de código-fonte em C</h2>
+                                <p>Use um editor de texto para criar um arquivo com a extensão .c. Por exemplo, você pode usar <strong>nano</strong>, <strong>vim</strong>, ou <strong>gedit</strong>. Vamos usar o <strong>vim</strong> nesse exemplo.</p>
 
-                <h3 class="card-title">Passo 1: Abrir o terminal</h3>
-                <p>Primeiro, abra o terminal.</p>
+                                <h3 class="card-title">Passo 1: Abrir o terminal</h3>
+                                <p>Primeiro, abra o terminal.</p>
 
-                <h3 class="card-title">Passo 2: Criar um arquivo de código-fonte em C</h3>
-                <p>Usaremos o vim para criar um arquivo de código.</p>
-                <p>Criando um arquivo novo:</p>
-                <pre>vim meu_programa.c</pre>
-                <p>Entrar no modo de inserção:</p>
-                <p>No vim, você precisa entrar no modo de inserção para começar a digitar. Pressione <strong>i</strong> para entrar no modo de inserção.</p>
-                <p>Escreva o código:</p>
-                <pre>#include &lt;stdio.h&gt;
+                                <h3 class="card-title">Passo 2: Criar um arquivo de código-fonte em C</h3>
+                                <p>Usaremos o vim para criar um arquivo de código.</p>
+                                <p>Criando um arquivo novo:</p>
+                                <pre>vim meu_programa.c</pre>
+                                <p>Entrar no modo de inserção:</p>
+                                <p>No vim, você precisa entrar no modo de inserção para começar a digitar. Pressione <strong>i</strong> para entrar no modo de inserção.</p>
+                                <p>Escreva o código:</p>
+                                <pre>#include &lt;stdio.h&gt;
 
                     int main() {
                         printf("Olá, mundo!\\n");
                         return 0;
                     }</pre>
 
-                <h3 class="card-title">Salvar e sair do vim:</h3>
-                <p>Para salvar o arquivo e sair do vim, siga essas etapas:</p>
-                <ul>
-                    <li>Pressione <strong>Esc</strong> para sair do modo de inserção.</li>
-                    <li>Digite <strong>:wq</strong> e pressione <strong>Enter</strong>. Isso salva o arquivo e sai do vim.</li>
-                </ul>
+                                <h3 class="card-title">Salvar e sair do vim:</h3>
+                                <p>Para salvar o arquivo e sair do vim, siga essas etapas:</p>
+                                <ul>
+                                    <li>Pressione <strong>Esc</strong> para sair do modo de inserção.</li>
+                                    <li>Digite <strong>:wq</strong> e pressione <strong>Enter</strong>. Isso salva o arquivo e sai do vim.</li>
+                                </ul>
 
-                <h2 class="card-title">4. Compilar o código</h2>
-                <p>Agora que você tem o código-fonte, você precisa compilá-lo usando o gcc.</p>
-                <h3 class="card-title">Compilar o programa:</h3>
-                <p>No terminal, digite o seguinte comando para compilar o arquivo <strong>meu_programa.c</strong>:</p>
-                <pre>gcc meu_programa.c -o meu_programa</pre>
-                <p>Aqui, <strong>-o meu_programa</strong> especifica o nome do arquivo executável que será gerado. Se você não usar essa opção, o executável será nomeado <strong>a.out</strong> por padrão.</p>
+                                <h2 class="card-title">4. Compilar o código</h2>
+                                <p>Agora que você tem o código-fonte, você precisa compilá-lo usando o gcc.</p>
+                                <h3 class="card-title">Compilar o programa:</h3>
+                                <p>No terminal, digite o seguinte comando para compilar o arquivo <strong>meu_programa.c</strong>:</p>
+                                <pre>gcc meu_programa.c -o meu_programa</pre>
+                                <p>Aqui, <strong>-o meu_programa</strong> especifica o nome do arquivo executável que será gerado. Se você não usar essa opção, o executável será nomeado <strong>a.out</strong> por padrão.</p>
 
-                <h2 class="card-title">5. Executar o programa</h2>
-                <p>Depois de compilar, você pode executar o programa gerado.</p>
-                <h3 class="card-title">Executar o programa:</h3>
-                <p>No terminal, digite o seguinte comando:</p>
-                <pre>./meu_programa</pre>
-                <p>se tudo estiver correto, você verá a saída</p>
-                <pre><code>Olá, Mundo!</code></pre>
+                                <h2 class="card-title">5. Executar o programa</h2>
+                                <p>Depois de compilar, você pode executar o programa gerado.</p>
+                                <h3 class="card-title">Executar o programa:</h3>
+                                <p>No terminal, digite o seguinte comando:</p>
+                                <pre>./meu_programa</pre>
+                                <p>se tudo estiver correto, você verá a saída</p>
+                                <pre><code>Olá, Mundo!</code></pre>
 
 
-                </div>
-             </div>
+                        </div>
+                    </div>
 
                     <nav aria-label="Pagination">
                         <hr class="my-0" />
                         <ul class="pagination justify-content-center my-4">
                             <li class="page-item disabled"><a class="page-link" href="index.html" tabindex="-1" aria-disabled="true">Newer</a></li>
-                            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+                            <li class="page-item active" aria-current="page"><a class="page-link" href="index.html">1</a></li>
                             <li class="page-item"><a class="page-link" href="#!">2</a></li>
                             <li class="page-item"><a class="page-link" href="#!">3</a></li>
                             <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
@@ -163,5 +163,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-</body>
+    </body>
 </html>
