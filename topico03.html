@@ -29,12 +29,6 @@
         </nav>
         <!-- Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">Bem-vindo ao nosso blog, onde cada post é uma nova jornada de conhecimento e inspiração!</h1>
-                    <p class="lead mb-0">Transforme seus sonhos em planos e seus planos em conquistas.</p>
-                </div>
-            </div>
         </header>
         <!-- Page content-->
         <div class="container">
@@ -43,66 +37,52 @@
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
                         <div class="card-body">
-                            <div class="small text-muted">Outubro 5, 2024</div>
-                            <h2 class="card-title">Dicas para Aprender Programação</h2>
-                            <p class="card-text">Para compilar códigos em C no linux usando o terminal, você pode usar o compilador gcc (GNU Compiler Collection).Aqui estão os passos básicos para compilar e executar um programa em C:</p>
-                            <a class="btn btn-primary" href="topico02.html">Leia mais →</a>
+                         <h1>Compilar e Executar Código Java pelo Terminal GNU/Linux</h1>
+                         <p>Aqui estão passos detalhados para compilar e executar um programa em Java usando o terminal.</p>
+
+                            <h2 class="card-title">Passo 1:</h2>
+                           <p>Antes de tudo, você precisa ter o Java Development Kit (JDK) instalado no seu sistema. Você pode verificar se o JDK está instalado e qual a versão está disponível usando o seguinte comando:</p>
+                             <pre><code>java -version</code></pre>
+                         <p>Se o JDK não estiver instalado, você pode instalá-lo usando o gerenciador de pacotes da sua distribuição:</p>
+
+                               <h3>Debian/Ubuntu</h3>
+                                 <pre><code> sudo apt update
+ sudo apt install default-jdk</code></pre>
+
+    <h3 class="card-title">Fedora</h3>
+    <pre><code>sudo dnf install java-1.8.0-openjdk-devel</code></pre>
+
+    <h2>Passo 2: Criar um arquivo de código</h2>
+    <p>Abra o terminal e use um editor de texto para criar um arquivo Java. Vamos usar o vim como exemplo.</p>
+    <pre><code>vim MeuPrograma.java</code></pre>
+    <p>Entre no modo de inserção pressionando <code>i</code> para entrar no modo de inserção. Digite o seguinte código Java simples:</p>
+
+    <pre><code>public class MeuPrograma {
+    public static void main(String[] args) {
+        System.out.println("Olá, mundo!");
+    }
+}</code></pre>
+
+    <p>Pressione <code>Esc</code>, digite <code>:wq</code> e pressione <code>Enter</code> para salvar o arquivo e sair do editor.</p>
+    <p>No terminal, use o comando <code>javac</code> para compilar o arquivo Java:</p>
+    <pre><code>javac MeuPrograma.java</code></pre>
+    <p>Se não houver erros de compilação, isso criará um arquivo chamado <code>MeuPrograma.class</code>, que contém o bytecode Java.</p>
+
+    <h2>Executar o Programa Java Compilado</h2>
+    <p>Para executar o programa Java compilado, use o comando <code>java</code> seguido do nome da classe (sem a extensão <code>.class</code>):</p>
+    <pre><code>java MeuPrograma</code></pre>
+    <p>Se tudo estiver correto, você verá a saída:</p>
+    <pre><code>Olá, mundo!</code></pre>
+
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts-->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2023</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Leia mais →</a>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2023</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Leia mais →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2023</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Leia mais →</a>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2023</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                    <a class="btn btn-primary" href="#!">Leia mais →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Pagination-->
                     <nav aria-label="Pagination">
                         <hr class="my-0" />
                         <ul class="pagination justify-content-center my-4">
-                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+                            <li class="page-item disabled"><a class="page-link" href="index.html" tabindex="-1" aria-disabled="true">Newer</a></li>
                             <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
                             <li class="page-item"><a class="page-link" href="#!">2</a></li>
                             <li class="page-item"><a class="page-link" href="#!">3</a></li>
