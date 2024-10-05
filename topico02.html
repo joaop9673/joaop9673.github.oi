@@ -42,60 +42,91 @@
                             <p>Para compilar códigos em C no Linux usando o terminal, você pode usar o compilador <strong>gcc</strong> (GNU Compiler Collection). Aqui estão os passos básicos para compilar e executar um programa em C:</p>
                             </header>
                             <section>
-                                <h2 class="card-title">1. Verificar se o gcc está instalado</h2>
-                                <p>Você pode verificar se o gcc está instalado digitando:</p>
-                                <pre>gcc --version</pre>
+                                <h2 class="card-title">Compilar Códigos em C Usando o Vim</h1>
+                                <p>Compilar códigos em C é um processo que envolve a conversão do código-fonte escrito em C para um executável que pode ser executado pelo sistema operacional. Aqui estão os passos básicos para compilar um programa em C, usando o compilador GCC (GNU Compiler Collection) e o editor de texto Vim.</p>
 
-                                <h2 class="card-title">2. Instalar o GCC (se ainda não estiver instalado)</h2>
-                                <p>Primeiro, você precisa ter o gcc instalado no seu sistema. Você pode instalar usando o gerenciador de pacotes da sua distribuição. Por exemplo:</p>
-                                <h3 class="card-title">Debian/Ubuntu:</h3>
-                                <pre>sudo apt update
-        sudo apt install build-essential</pre>
-                                <h3 class="card-title">Fedora:</h3>
-                                <pre>sudo dnf install gcc</pre>
-
-                                <h2 class="card-title">3. Criar um arquivo de código-fonte em C</h2>
-                                <p>Use um editor de texto para criar um arquivo com a extensão .c. Por exemplo, você pode usar <strong>nano</strong>, <strong>vim</strong>, ou <strong>gedit</strong>. Vamos usar o <strong>vim</strong> nesse exemplo.</p>
-
-                                <h3 class="card-title">Passo 1: Abrir o terminal</h3>
-                                <p>Primeiro, abra o terminal.</p>
-
-                                <h3 class="card-title">Passo 2: Criar um arquivo de código-fonte em C</h3>
-                                <p>Usaremos o vim para criar um arquivo de código.</p>
-                                <p>Criando um arquivo novo:</p>
-                                <pre>vim meu_programa.c</pre>
-                                <p>Entrar no modo de inserção:</p>
-                                <p>No vim, você precisa entrar no modo de inserção para começar a digitar. Pressione <strong>i</strong> para entrar no modo de inserção.</p>
-                                <p>Escreva o código:</p>
-                                <pre>#include &lt;stdio.h&gt;
-
-                    int main() {
-                        printf("Olá, mundo!\\n");
-                        return 0;
-                    }</pre>
-
-                                <h3 class="card-title">Salvar e sair do vim:</h3>
-                                <p>Para salvar o arquivo e sair do vim, siga essas etapas:</p>
+                                <h2 class="card-title">1. Instalar o GCC</h2>
+                                <p>Se você ainda não tem o GCC instalado, você pode instalá-lo usando o gerenciador de pacotes do seu sistema. Aqui estão alguns exemplos:</p>
                                 <ul>
-                                    <li>Pressione <strong>Esc</strong> para sair do modo de inserção.</li>
-                                    <li>Digite <strong>:wq</strong> e pressione <strong>Enter</strong>. Isso salva o arquivo e sai do vim.</li>
+                                    <li><strong>Ubuntu/Debian</strong>:
+                                        <pre>
+sudo apt update
+sudo apt install build-essential
+                                        </pre>
+                                    </li>
+                                    <li><strong>Fedora</strong>:
+                                        <pre>
+sudo dnf install gcc
+                                        </pre>
+                                    </li>
+                                    <li><strong>Arch Linux</strong>:
+                                        <pre>
+sudo pacman -S gcc
+                                        </pre>
+                                    </li>
+                                    <li><strong>Windows</strong>: Você pode instalar o MinGW ou usar o WSL (Windows Subsystem for Linux) para ter um ambiente Linux no Windows.</li>
                                 </ul>
 
-                                <h2 class="card-title">4. Compilar o código</h2>
-                                <p>Agora que você tem o código-fonte, você precisa compilá-lo usando o gcc.</p>
-                                <h3 class="card-title">Compilar o programa:</h3>
-                                <p>No terminal, digite o seguinte comando para compilar o arquivo <strong>meu_programa.c</strong>:</p>
-                                <pre>gcc meu_programa.c -o meu_programa</pre>
-                                <p>Aqui, <strong>-o meu_programa</strong> especifica o nome do arquivo executável que será gerado. Se você não usar essa opção, o executável será nomeado <strong>a.out</strong> por padrão.</p>
+                                <h2 class="card-title">2. Escrever o Código em C com o Vim</h2>
+                                <p>Abra o terminal e inicie o Vim para criar um arquivo de texto com a extensão <code>.c</code>. Por exemplo, para criar <code>programa.c</code>, use o seguinte comando:</p>
+                                <pre>
+vim programa.c
+                                </pre>
+                                <p>Dentro do Vim, pressione <code>i</code> para entrar no modo de inserção e escreva o seguinte código:</p>
+                                <pre>
+#include &lt;stdio.h&gt;
 
-                                <h2 class="card-title">5. Executar o programa</h2>
-                                <p>Depois de compilar, você pode executar o programa gerado.</p>
-                                <h3 class="card-title">Executar o programa:</h3>
-                                <p>No terminal, digite o seguinte comando:</p>
-                                <pre>./meu_programa</pre>
-                                <p>se tudo estiver correto, você verá a saída</p>
-                                <pre><code>Olá, Mundo!</code></pre>
+int main() {
+    printf("Olá, Mundo!\n");
+    return 0;
+}
+                                </pre>
+                                <p>Depois de escrever o código, pressione <code>Esc</code> para sair do modo de inserção, e então digite <code>:wq</code> para salvar e sair do Vim.</p>
 
+                                <h2 class="card-title">3. Compilar o Código</h2>
+                                <p>Abra o terminal e navegue até o diretório onde o arquivo <code>programa.c</code> está localizado. Use o seguinte comando para compilar o código:</p>
+                                <pre>
+gcc programa.c -o programa
+                                </pre>
+                                <p>- <code>gcc</code> é o comando para chamar o compilador.<br>
+                                - <code>programa.c</code> é o nome do arquivo de código-fonte.<br>
+                                - <code>-o programa</code> especifica o nome do arquivo executável que será gerado (neste caso, <code>programa</code>).</p>
+
+                                <h2 class="card-title">4. Executar o Programa</h2>
+                                <p>Após a compilação, você pode executar o programa gerado. No terminal, use o seguinte comando:</p>
+                                <pre>
+./programa
+                                </pre>
+                                <p>Se tudo estiver correto, você verá a saída:</p>
+                                <pre>
+Olá, Mundo!
+                                </pre>
+
+                                <h2 class="card-title">5. Compilação com Opções Adicionais</h2>
+                                <p>Você pode usar várias opções ao compilar seu código:</p>
+                                <ul>
+                                    <li><code>-Wall</code>: Ativa todos os avisos.</li>
+                                    <li><code>-g</code>: Gera informações de depuração.</li>
+                                    <li><code>-O2</code>: Ativa otimizações.</li>
+                                </ul>
+                                <p>Por exemplo:</p>
+                                <pre>
+gcc -Wall -g -O2 programa.c -o programa
+                                </pre>
+                                <h2 class="card-title">6. Compilação de Múltiplos Arquivos</h2>
+                                <p>Se você tiver múltiplos arquivos de código-fonte, você pode compilá-los juntos. Por exemplo, se você tiver dois arquivos, <code>arquivo1.c</code> e <code>arquivo2.c</code>, você pode usar o seguinte comando:</p>
+                                <pre>
+gcc arquivo1.c arquivo2.c -o programa
+                                </pre>
+                                <p>Isso irá compilar ambos os arquivos e gerar um executável chamado <code>programa</code>.</p>
+
+                                <h2 class="card-title">7. Erros de Compilação</h2>
+                                <p>Se houver erros no seu código, o GCC exibirá mensagens de erro no terminal. Essas mensagens geralmente incluem a linha do erro e uma descrição do que está errado. Você precisará corrigir esses erros no seu código-fonte e tentar compilar novamente.</p>
+                                <p>Por exemplo, se você esquecer de incluir um ponto e vírgula no final de uma linha, o GCC pode mostrar uma mensagem de erro semelhante a:</p>
+                                <pre>
+error: expected ‘;’ before ‘return’
+                                </pre>
+                                <p>Após corrigir os erros, você pode tentar compilar novamente usando o mesmo comando <code>gcc</code>.</p>
 
                         </div>
                     </div>
