@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Vi & Vigo</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h1 class="card-title">Permissões no Linux</h1>
+
+
+                            <p>No Linux, as permissões de arquivos e diretórios são um aspecto fundamental da segurança e do controle de acesso. As permissões determinam quem pode ler, escrever ou executar um arquivo ou diretório. Aqui está uma visão geral das permissões no Linux:</p>
+
+                            <h2 class="card-title">Tipos de Permissões</h2>
+                            <ul>
+                                <li><strong>Leitura (r)</strong>: Permite que o usuário leia o conteúdo do arquivo ou liste o conteúdo de um diretório.</li>
+                                <li><strong>Escrita (w)</strong>: Permite que o usuário modifique o conteúdo do arquivo ou adicione/remova arquivos em um diretório.</li>
+                                <li><strong>Execução (x)</strong>: Permite que o usuário execute um arquivo como um programa ou acesse um diretório.</li>
+                            </ul>
+
+                            <h2 class="card-title">Classes de Usuários</h2>
+                            <ul>
+                                <li><strong>Usuário (u)</strong>: O proprietário do arquivo.</li>
+                                <li><strong>Grupo (g)</strong>: Os usuários que pertencem ao mesmo grupo que o proprietário do arquivo.</li>
+                                <li><strong>Outros (o)</strong>: Todos os outros usuários que não são o proprietário nem pertencem ao grupo.</li>
+                            </ul>
+
+                            <h2 class="card-title">Visualizando Permissões</h2>
+                            <p>Você pode visualizar as permissões de arquivos e diretórios usando o comando <code>ls -l</code>. A saída será algo como:</p>
+                            <pre>
+-rwxr-xr-- 1 user group 1234 Jan 01 12:00 arquivo.txt
+                            </pre>
+                            <p>A primeira coluna indica as permissões:</p>
+                            <ul>
+                                <li>O primeiro caractere indica o tipo de arquivo (<code>-</code> para arquivo regular, <code>d</code> para diretório, etc.).</li>
+                                <li>Os próximos nove caracteres são divididos em três grupos de três:</li>
+                                <ul>
+                                    <li>O primeiro grupo (posições 2-4) mostra as permissões do usuário (u).</li>
+                                    <li>O segundo grupo (posições 5-7) mostra as permissões do grupo (g).</li>
+                                    <li>O terceiro grupo (posições 8-10) mostra as permissões para outros (o).</li>
+                                </ul>
+                            </ul>
+
+                            <h2 class="card-title">Modificando Permissões</h2>
+                            <p>Você pode modificar as permissões usando o comando <code>chmod</code>. Existem duas maneiras de usar o <code>chmod</code>: a notação simbólica e a notação octal.</p>
+
+                            <h3 class="card-title">Notação Simbólica</h3>
+                            <ul>
+                                <li>Para adicionar uma permissão: <code>chmod u+x arquivo.txt</code> (adiciona permissão de execução para o usuário).</li>
+                                <li>Para remover uma permissão: <code>chmod g-w arquivo.txt</code> (remove permissão de escrita para o grupo).</li>
+                            </ul>
+
+                            <h3 class="card-title">Notação Octal</h3>
+                            <p>As permissões são representadas por números:</p>
+                            <ul>
+                                <li>Leitura = 4</li>
+                                <li>Escrita = 2</li>
+                                <li>Execução = 1</li>
+                            </ul>
+                            <p>Você pode somar esses valores para definir permissões. Por exemplo, <code>chmod 755 arquivo.txt</code> define:</p>
+                            <ul>
+                                <li>Usuário: leitura, escrita e execução (4+2+1=7)</li>
+                                <li>Grupo: leitura e execução (4+1=5)</li>
+                                <li>Outros: leitura e execução (4+1=5)</li>
+                            </ul>
+                </div>
+             </div>
+
+                    <nav aria-label="Pagination">
+                        <hr class="my-0" />
+                        <ul class="pagination justify-content-center my-4">
+                            <li class="page-item disabled"><a class="page-link" href="index.html" tabindex="-1" aria-disabled="true">Newer</a></li>
+                            <li class="page-item active" aria-current="page"><a class="page-link" href="index.html">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">15</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Web Design</a></li>
+                                        <li><a href="#!">HTML</a></li>
+                                        <li><a href="#!">Freebies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">JavaScript</a></li>
+                                        <li><a href="#!">CSS</a></li>
+                                        <li><a href="#!">Tutorials</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Side Widget</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
